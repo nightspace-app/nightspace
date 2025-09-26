@@ -14,6 +14,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import dev.tymoshenko.nightspace.ui.screens.auth.AuthHost
+import dev.tymoshenko.nightspace.ui.theme.NightspaceTheme
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -23,7 +24,7 @@ import nightspace.composeapp.generated.resources.compose_multiplatform
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    NightspaceTheme {
         AuthHost()
 //        var showContent by remember { mutableStateOf(false) }
 //        Column(

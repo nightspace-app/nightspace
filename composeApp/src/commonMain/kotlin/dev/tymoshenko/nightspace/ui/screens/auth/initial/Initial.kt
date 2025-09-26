@@ -15,6 +15,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.tymoshenko.nightspace.nav.screens.AuthScreens
@@ -36,11 +37,13 @@ fun Initial(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
+                modifier = Modifier
+                    .padding(16.dp),
                 painter = painterResource(Res.drawable.auth_img),
                 contentDescription = ""
             )
 
-            Spacer(Modifier.size(24.dp))
+            Spacer(Modifier.size(32.dp))
 
             AuthButton(
                 onClick = { },
@@ -48,21 +51,21 @@ fun Initial(navController: NavHostController) {
                 leadingIcon = {
                     Image(
                         modifier = Modifier
-                            .size(24.dp),
+                            .size(30.dp),
                         painter = painterResource(Res.drawable.google_icon),
                         contentDescription = ""
                     )
                 }
             )
 
-            Spacer(Modifier.size(8.dp))
+            Spacer(Modifier.size(16.dp))
 
             AuthButton(
                 onClick = { navController.navigate(AuthScreens.Login) },
                 text = "Sign in with Email"
             )
 
-            Spacer(Modifier.size(8.dp))
+            Spacer(Modifier.size(16.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
