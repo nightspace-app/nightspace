@@ -37,13 +37,11 @@ fun Initial(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                modifier = Modifier
-                    .padding(16.dp),
                 painter = painterResource(Res.drawable.auth_img),
                 contentDescription = ""
             )
 
-            Spacer(Modifier.size(32.dp))
+            Spacer(Modifier.size(48.dp))
 
             AuthButton(
                 onClick = { },
