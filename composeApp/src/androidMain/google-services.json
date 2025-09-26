@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "516431518047",
+    "project_id": "nightspace-multiplatform",
+    "storage_bucket": "nightspace-multiplatform.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516431518047:android:80d01f328ee724eab17eea",
+        "android_client_info": {
+          "package_name": "dev.tymoshenko.nightspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516431518047-u15id5h6ek14tbshcq48q4al0defrkag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.tymoshenko.nightspace",
+            "certificate_hash": "35a89ee2b2fa62590613c97361768e18d58c32c4"
+          }
+        },
+        {
+          "client_id": "516431518047-ku35dmji33eut3n0oba9o5a1la5gejc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1eeWLQKegAVBtlj1_9qFONAf_P9v3xe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516431518047-ku35dmji33eut3n0oba9o5a1la5gejc0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "516431518047-8pt0p8ksnu6vtn18i1ru0u4ss0k5ncbs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.tymoshenko.nightspace.Nightspace"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
