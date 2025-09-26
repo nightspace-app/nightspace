@@ -10,7 +10,6 @@ plugins {
     alias(libs.plugins.composeHotReload)
     kotlin("plugin.serialization") version "2.2.0"
     id("com.google.gms.google-services") version "4.4.3" apply false
-    id("org.jetbrains.kotlin.native.cocoapods") version "2.2.20"
 }
 
 kotlin {
@@ -20,20 +19,24 @@ kotlin {
         }
     }
 
-    iosArm64()
-    iosSimulatorArm64()
-
-    cocoapods {
-        version = "1.0"
-        summary = "Some description for a Kotlin/Native module"
-        homepage = "Link to a Kotlin/Native module homepage"
-        ios.deploymentTarget = "16.0"
-
-        podfile = project.file("../iosApp/Podfile")
-
-        framework {
-            baseName = "composeApp"
+    listOf(
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "ComposeApp"
             isStatic = true
+        }
+
+        iosTarget.compilations.getByName("main") {
+            val GoogleSignIn by cinterops.creating {
+                definitionFile.set(project.file("../composeApp/src/iosMain/GoogleSignIn.def"))
+            }
+        }
+
+        iosTarget.binaries.all {
+            // Linker options required to link to the library.
+            linkerOpts("-L/path/to/library/binaries", "-lbinaryname")
         }
     }
 

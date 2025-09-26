@@ -8,5 +8,4 @@ plugins {
     alias(libs.plugins.composeCompiler) apply false
     alias(libs.plugins.kotlinJvm) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
-    id("org.jetbrains.kotlin.native.cocoapods") version "2.2.20"
 }

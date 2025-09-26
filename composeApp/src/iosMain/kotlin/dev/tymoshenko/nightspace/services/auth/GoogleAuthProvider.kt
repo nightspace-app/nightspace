@@ -2,6 +2,7 @@ package dev.tymoshenko.nightspace.services.auth
 
 import androidx.compose.runtime.Composable
 import kotlinx.cinterop.ExperimentalForeignApi
+import GoogleSignIn.GIDSignIn
 
 actual class GoogleAuthProvider {
     @Composable
